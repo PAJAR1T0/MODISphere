@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terra</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+    <header class="header">
+      <nav class="navbar">
+        <ul>
+          <li><a href="./Home/index.html">Home</a></li>
+          <li><a href="/Aster/aster.html">Aster</a></li>
+          <li><a href="/Ceres/ceres.html">Ceres</a></li>
+          <li><a href="/Misr/misr.html">MISR</a></li>
+          <li><a href="/Modis/modis.html">MODIS</a></li>
+          <li><a href="/Mopitt/mopitt.html">MOPITT</a></li>
+        </ul>
+      </nav>
+      <hr>
+      <nav class="header__menu">
+        <p class="header__menu__titulo">Explore the Universe</p>
+      </nav>
+    </header>
+
+    <main>
+      <div class="presentacion">
+        <section class="presentacion__contenido">
+          <h1 class="presentacion__contenido__titulo">
+            <strong class="titulo">ASTER</strong>
+          </h1>
+          <p class="presentacion__contenido__texto">
+            ASTER is an instrument designed to capture high-resolution images of Earth’s surface across multiple wavelengths.
+            Its precision supports studies of topography, volcano morphology, urban expansion, glacier retreat, and environmental degradation.
+            ASTER data are key to monitoring crustal changes and understanding the geologic and climate processes shaping our planet.
+          </p>
+        </section>
+        <!-- Imagen ahora desde /public -->
+        <img class="presentacion__imagen" src="/imagenes/ASTER2.jpeg.jpg" alt="ASTER satellite">
+      </div>
+
+      <div class="presentacion1">
+        <section class="presentacion__contenido">
+          <h1 class="presentacion__contenido__titulo">
+            <strong class="titulo">CERES</strong>
+          </h1>
+          <p class="presentacion__contenido__texto">
+            CERES measures Earth’s energy budget: how much solar radiation reaches the planet and how much is reflected or emitted back to space.
+            This is essential for climate studies, revealing how clouds, aerosols, and surface types influence global warming.
+            CERES data help build more accurate models of atmospheric behavior and the planet’s energy balance.
+          </p>
+        </section>
+        <img class="presentacion__imagen" src="/public/imagenes/CERES.jpeg.jpg" alt="CERES instrument">
+      </div>
+
+      <div class="presentacion2">
+        <section class="presentacion__contenido">
+          <h1 class="presentacion__contenido__titulo">
+            <strong class="titulo">MISR</strong>
+          </h1>
+          <p class="presentacion__contenido__texto">
+            MISR observes Earth from nine distinct angles, enabling a 3D-like view of clouds, aerosols, and surfaces.
+            It can measure cloud height, particle size, and surface/sea reflectance—powerful for studying air quality, wildfire smoke, and aerosol–climate interactions.
+          </p>
+        </section>
+        <img class="presentacion__imagen" src="/public/imagenes/misr-globe.jpg" alt="MISR views">
+      </div>
+
+      <div class="presentacion3">
+        <section class="presentacion__contenido">
+          <h1 class="presentacion__contenido__titulo">
+            <strong class="titulo">MODIS</strong>
+          </h1>
+          <p class="presentacion__contenido__texto">
+            MODIS provides daily global coverage, capturing over 30 environmental data products:
+            wildfires, vegetation cover, sea-surface temperature, clouds, and sea-ice movement.
+            Its continuous global record supports disaster response, agriculture, and climate-change monitoring.
+          </p>
+        </section>
+        <img class="presentacion__imagen" src="/public/imagenes/MODIS2.jpg" alt="MODIS global monitoring">
+      </div>
+
+      <div class="presentacion4">
+        <section class="presentacion__contenido">
+          <h1 class="presentacion__contenido__titulo">
+            <strong class="titulo">MOPITT</strong>
+          </h1>
+          <p class="presentacion__contenido__texto">
+            MOPITT retrieves atmospheric composition, focusing on carbon monoxide and other pollutants.
+            Scientists can trace pollution sources (fires, transport, industry) and track their dispersion.
+            Its information is critical to understand air-pollution dynamics and impacts on health and climate.
+          </p>
+        </section>
+        <img class="presentacion__imagen" src="/public/imagenes/MOPIT2.jpg" alt="MOPITT global CO">
+      </div>
+
+      <!-- Carousel: imágenes trasladadas a /public para consistencia -->
+      <div id="carruselSat" class="carousel slide my-5" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carruselSat" data-bs-slide-to="0" class="active"></button>
+          <button type="button" data-bs-target="#carruselSat" data-bs-slide-to="1"></button>
+          <button type="button" data-bs-target="#carruselSat" data-bs-slide-to="2"></button>
+          <button type="button" data-bs-target="#carruselSat" data-bs-slide-to="3"></button>
+          <button type="button" data-bs-target="#carruselSat" data-bs-slide-to="4"></button>
+        </div>
+
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="/public/imagenes/astercrsl.png" class="d-block mx-auto img-fluid" alt="ASTER">
+          </div>
+          <div class="carousel-item">
+            <img src="/public/imagenes/cerescrsl.png" class="d-block mx-auto img-fluid" alt="CERES">
+          </div>
+          <div class="carousel-item">
+            <img src="/public/imagenes/misrcrsl.png" class="d-block mx-auto img-fluid" alt="MISR">
+          </div>
+          <div class="carousel-item">
+            <img src="/public/imagenes/modiscrsl.png" class="d-block mx-auto img-fluid" alt="MODIS">
+          </div>
+          <div class="carousel-item">
+            <img src="/public/imagenes/mopittcrsl.png" class="d-block mx-auto img-fluid" alt="MOPITT">
+          </div>
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#carruselSat" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carruselSat" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </button>
+      </div>
+    </main>
+<div class="button">
+    <a class="btn btn-primary" href="/3dView/index.html" role="button">Watch Model</a>
+</div>
+    <footer class="footer">
+      <p>Developed by CosmicBees</p>
+    </footer>
+  </body>
+</html>

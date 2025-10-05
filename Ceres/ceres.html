@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>CERES — Earth's Energy Budget</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <header class="hero">
+    <nav class="navbar">
+      <ul>
+        <li><a href="/Home/index.html">Home</a></li>
+        <li><a href="/Aster/aster.html">Aster</a></li>
+        <li><a href="/Ceres/ceres.html">Ceres</a></li>
+        <li><a href="/Misr/misr.html">MISR</a></li>
+        <li><a href="/Modis/modis.html">MODIS</a></li>
+        <li><a href="/Mopitt/mopitt.html">MOPITT</a></li>
+      </ul>
+    </nav>
+    <hr>
+    <h1>CERES</h1>
+    <div class="image-container">
+      <!-- Usamos una imagen local desde /public -->
+      <img src="/public/imagenes/mp1.png" alt="Global radiation map (sample)" />
+    </div>
+  </header>
+
+  <section class="content">
+    <div class="left-column">
+      <h2>What does CERES measure?</h2>
+      <p>
+        CERES measures how much solar energy reaches Earth and how much thermal energy is emitted back to space.
+        This helps determine whether our planet is gaining or losing heat.
+      </p>
+      <p>
+        It also studies how clouds, aerosols, and surfaces (ice, oceans, forests) impact this balance.
+      </p>
+
+      <h2>Observation capabilities</h2>
+      <ul>
+        <li><i class="fa-solid fa-radiation"></i> Shortwave radiation (reflected)</li>
+        <li><i class="fa-solid fa-circle-radiation"></i> Longwave radiation (emitted)</li>
+        <li><i class="fa-solid fa-sun"></i> Global albedo</li>
+      </ul>
+
+      <h2>Technical sheet</h2>
+      <div class="specs-grid">
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front spec-card">Resolution: Global</div>
+            <div class="flip-card-back spec-card">Planet-wide coverage ideal for climate studies.</div>
+          </div>
+        </div>
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front spec-card">Bands: Shortwave/Longwave</div>
+            <div class="flip-card-back spec-card">Measures reflected solar (SW) and emitted thermal (LW) radiation.</div>
+          </div>
+        </div>
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front spec-card">Orbit: Terra</div>
+            <div class="flip-card-back spec-card">Instrument aboard NASA’s Terra satellite (polar orbit).</div>
+          </div>
+        </div>
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front spec-card">Launch: 1999</div>
+            <div class="flip-card-back spec-card">First CERES flew in December 1999 with Terra.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="right-column">
+      <h2>Comparison: Year 2000 vs 2025</h2>
+      <div class="slider-container">
+        <!-- Imágenes ahora desde /public -->
+        <img src="/public/imagenes/mp1.png" alt="2000" />
+        <img src="/public/imagenes/mp2.png" alt="2025" />
+      </div>
+
+      <!-- (Opcional) Controles para el script: se activan si existen -->
+      <div class="controls">
+        <div style="margin:1rem 0;">
+          <label for="season-select">Season:</label>
+          <select id="season-select">
+            <option value="annual">Annual</option>
+            <option value="djf">DJF (Dec–Feb)</option>
+            <option value="mam">MAM (Mar–May)</option>
+            <option value="jja">JJA (Jun–Aug)</option>
+            <option value="son">SON (Sep–Nov)</option>
+          </select>
+        </div>
+        <div style="margin:1rem 0;">
+          <label for="map-type">Map:</label>
+          <select id="map-type">
+            <option value="shortwave">Shortwave</option>
+            <option value="longwave">Longwave</option>
+            <option value="albedo">Albedo</option>
+          </select>
+        </div>
+
+        <button id="view-maps-btn">View energy maps</button>
+
+        <div style="margin-top:1rem;">
+          <label>Cloudiness: <span id="cloud-value">50</span>%</label>
+          <input type="range" id="cloudiness" min="0" max="100" value="50" class="slider">
+        </div>
+        <div style="margin-top:0.5rem;">
+          <label>Albedo: <span id="albedo-value">30</span>%</label>
+          <input type="range" id="albedo" min="0" max="100" value="30" class="slider">
+        </div>
+        <p style="margin-top:0.5rem;">Net balance (toy model): <strong id="balance-result">—</strong></p>
+      </div>
+    </div>
+  </section>
+
+ 
+
+  <script src="script.js"></script>
+</body>
+</html>

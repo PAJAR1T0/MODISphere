@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MISR – Multi-Angle Imaging</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="hero">
+    <nav class="navbar">
+      <ul>
+        <li><a href="/Home/index.html">Home</a></li>
+        <li><a href="/Aster/aster.html">Aster</a></li>
+        <li><a href="/Ceres/ceres.html">Ceres</a></li>
+        <li><a href="/Misr/misr.html">MISR</a></li>
+        <li><a href="/Modis/modis.html">MODIS</a></li>
+        <li><a href="/Mopitt/mopitt.html">MOPITT</a></li>
+      </ul>
+    </nav>
+    <hr>
+    <h1>MISR</h1>
+    <p class="subtitle">Observe clouds and aerosols from nine viewing angles.</p>
+    <div class="image-container">
+      <img src="/public/imagenes/mp1.png" alt="Earth globe with aerosols and clouds" />
+    </div>
+    <button class="cta-button" id="cycle-btn">Change angle</button>
+  </header>
+
+  <section class="content">
+    <div class="left-column">
+      <h2>Multi-angle Viewer</h2>
+      <div class="main-view">
+        <img id="main-image" src="/public/imagenes/misr-angle-0.jpg" alt="Main nadir view">
+      </div>
+
+      <div class="thumbnails">
+        <img src="/public/imagenes/misr-angle--70.jpg" data-angle="-70°" alt="-70°" class="thumb active" />
+        <img src="/public/imagenes/misr-angle--60.jpg" data-angle="-60°" alt="-60°" class="thumb" />
+        <img src="/public/imagenes/misr-angle--45.jpg" data-angle="-45°" alt="-45°" class="thumb" />
+        <img src="/public/imagenes/misr-angle--26.jpg" data-angle="-26°" alt="-26°" class="thumb" />
+        <img src="/public/imagenes/misr-angle-0.jpg" data-angle="0° (nadir)" alt="0°" class="thumb" />
+        <img src="/public/imagenes/misr-angle-26.jpg" data-angle="26°" alt="26°" class="thumb" />
+        <img src="/public/imagenes/misr-angle-45.jpg" data-angle="45°" alt="45°" class="thumb" />
+        <img src="/public/imagenes/misr-angle-60.jpg" data-angle="60°" alt="60°" class="thumb" />
+        <img src="/public/imagenes/misr-angle-70.jpg" data-angle="70°" alt="70°" class="thumb" />
+      </div>
+    </div>
+
+    <section class="tech-block">
+      <h2>Technical Sheet</h2>
+      <div class="specs-grid">
+        <div class="spec-card">9 Cameras</div>
+        <div class="spec-card">Angles: ±70°</div>
+        <div class="spec-card">Resolution: ~275 m</div>
+        <div class="spec-card">Orbit: Terra (705 km)</div>
+        <div class="spec-card">Coverage: Global</div>
+      </div>
+    </section>
+
+    <div class="right-column">
+      <h2>Why Multiple Angles?</h2>
+      <p>
+        Multi-angle observation enables calculation of <strong>cloud height</strong> using stereo triangulation and reveals the 3D structure of the atmosphere.
+      </p>
+      <p>
+        It also improves the characterization of <strong>aerosols</strong> and the <em>BRDF</em> (Bidirectional Reflectance Distribution Function), describing how surfaces reflect light depending on angle.
+      </p>
+
+      <h2>MISR Vision</h2>
+      <div class="slider-wrap">
+        <div class="slider-container" id="ab-slider" style="--pos:50%;">
+          <img src="/public/imagenes/misr-fire.jpg" alt="MISR fire image with smoke height" />
+          <img src="/public/imagenes/modis-fire.jpg" alt="MODIS fire image without height" />
+        </div>
+      </div>
+
+      <h2>Applications</h2>
+      <div class="applications-grid">
+        <div class="app-card">Air quality</div>
+        <div class="app-card">Dust & smoke transport</div>
+        <div class="app-card">Cloud height</div>
+        <div class="app-card">Climate model validation</div>
+      </div>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>

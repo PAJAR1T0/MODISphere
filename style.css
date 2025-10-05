@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Alan+Sans:wght@300..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+:root {
+  /* colors */
+  --main-color: #000000;
+  --secondary-color: #F6F6F6;
+  --tertiary-color: #22D4FD;
+  --fourth-color: #272727;
+
+  /* fonts */
+  --OpenSans-font: 'Open Sans', sans-serif;
+  --AlanSans-font: 'Alan Sans', sans-serif;
+}
+
+/* Reset default padding and margin */
+* { padding: 0; margin: 0; }
+
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom, #000428, #004e92);
+  color: #ffffff;
+  min-height: 100vh;
+}
+
+/* Animated star background */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-image:
+    radial-gradient(2px 2px at 20px 30px, #eee, transparent),
+    radial-gradient(2px 2px at 40px 70px, rgba(255,255,255,0.8), transparent),
+    radial-gradient(1px 1px at 90px 40px, #fff, transparent),
+    radial-gradient(1px 1px at 130px 80px, rgba(255,255,255,0.6), transparent),
+    radial-gradient(2px 2px at 160px 30px, #ddd, transparent);
+  background-repeat: repeat;
+  background-size: 200px 100px;
+  opacity: 0.1;
+  z-index: -1;
+  animation: twinkle 4s ease-in-out infinite alternate;
+}
+
+.header { padding: 2% 38% 0%; }
+.header__menu { display: flex; gap: 80px; }
+.header__menu__titulo {
+  font-family: var(--AlanSans-font);
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: var(--tertiary-color);
+  text-decoration: none;
+}
+
+.presentacion,
+.presentacion1,
+.presentacion2,
+.presentacion3,
+.presentacion4 {
+  display: flex;
+  align-items: center;
+  padding: 6% 10%;
+  justify-content: space-between;
+  gap: 50px;
+}
+.presentacion1,
+.presentacion3 { flex-direction: row-reverse; }
+
+.titulo { color: var(--tertiary-color); }
+
+.presentacion__contenido {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.presentacion__contenido__titulo{
+  font-size: 3.25 rem; /* keep as provided */
+  font-family: var(--OpenSans-font);
+  text-align: center;
+}
+
+.presentacion__contenido__texto {
+  font-size: 1.5rem;
+  font-family: var(--AlanSans-font);
+  color: var(--secondary-color);
+}
+
+.presentacion__imagen{
+  flex: 1;
+  max-width: 50%;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Footer */
+.footer {
+  background-color: var(--tertiary-color);
+  padding: .1rem;
+  color: var(--main-color);
+  text-align: center;
+  font-family: var(--OpenSans-font);
+  font-weight: 400;
+  font-size: 1.5rem;
+}
+
+/* Responsive tweaks */
+@media (max-width:1200px){
+  .header { padding: 10%; }
+  .header__menu { justify-content: center; }
+  .presentacion { flex-direction: column-reverse; padding: 5%; }
+  .presentacion__contenido { width: auto; }
+}
+
+/* Carousel size note: you can tweak these values */
+.carousel-item img {
+  max-width: 70%;
+  height: 70%;
+}
+
+/* Center top navbar items */
+header .navbar ul {
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+  display: flex;
+  gap: 22px;
+  color: aliceblue;
+  justify-content: center;
+  align-items: center;
+}
+/* Center and enlarge the "Watch Model" button */
+.button {
+  display: flex;
+  justify-content: center;   /* centers horizontally */
+  align-items: center;       /* centers vertically if has height */
+  margin: 2rem 0;            /* space above and below */
+}
+
+.button .btn {
+  font-size: 1.4rem;         /* bigger text */
+  padding: 1rem 2.5rem;      /* taller and wider */
+  border-radius: 10px;       /* softer corners */
+  background-color: #22D4FD; /* your accent color */
+  color: #000;
+  border: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 16px rgba(34, 212, 253, 0.3);
+}
+
+.button .btn:hover {
+  background-color: #0fb7e8; /* slightly darker on hover */
+  transform: scale(1.05);    /* subtle zoom */
+  box-shadow: 0 8px 20px rgba(34, 212, 253, 0.5);
+}

@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ASTER — Advanced Spaceborne Thermal Emission and Reflection Radiometer</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <nav class="navbar">
+      <ul>
+        <li><a href="/Home/index.html">Home</a></li>/
+        <li><a href="/Aster/aster.html">Aster</a></li>/
+        <li><a href="/Ceres/ceres.html">Ceres</a></li>/
+        <li><a href="/Misr/misr.html">MISR</a></li>/
+        <li><a href="/Modis/modis.html">MODIS</a></li>/
+        <li><a href="/Mopitt/mopitt.html">MOPITT</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container columns">
+    <section class="col left">
+      <h1 class="title">ASTER</h1>
+      <figure class="visual">
+        <img src="https://images.unsplash.com/photo-1549880338-65ddcdfd017b?q=80&w=1600&auto=format&fit=crop"
+             alt="Volcanic relief seen from above">
+      </figure>
+
+      <section id="what-measures" class="what-measures">
+        <h2>What does ASTER measure?</h2>
+        <p>ASTER captures information in <strong>visible (VNIR)</strong>, <strong>shortwave infrared (SWIR)</strong>,
+          and <strong>thermal infrared (TIR)</strong> bands. This enables material discrimination, moisture detection,
+          and thermal property analysis.</p>
+        <p>With stereo pairs, it generates <strong>digital elevation models</strong>, estimates <strong>land surface
+          temperature</strong>, and tracks <strong>land-use/land-cover change</strong>.</p>
+
+        <ul class="data-list">
+          <h3>Observation capabilities</h3>
+          <li><i class="fa-solid fa-mountain"></i> Topography (VNIR stereo pair)</li>
+          <li><i class="fa-solid fa-temperature-quarter"></i> Land surface temperature (TIR)</li>
+          <li><i class="fa-solid fa-seedling"></i> Land cover and land-use change</li>
+          <li><i class="fa-solid fa-gem"></i> Minerals and moisture (VNIR/SWIR)</li>
+        </ul>
+      </section>
+    </section>
+
+    <section class="col right">
+      <section id="compare" class="compare">
+        <h2>Before / After</h2>
+        <div class="compare__canvas">
+          <img id="img-before" alt="Before">
+          <img id="img-after" alt="After" class="after">
+          <div id="divider" class="divider" aria-hidden="true"></div>
+          <input id="slider" type="range" min="0" max="100" value="50" aria-label="Slide to compare">
+        </div>
+        <div class="thumbnails" id="thumbnails"></div>
+      </section>
+
+      <section id="spec" class="spec">
+        <h2>Technical sheet</h2>
+        <div class="cards">
+          <article class="card">
+            <div class="face front">Resolution 15–90 m</div>
+            <div class="face back">Pixel size: 15 m (VNIR) up to 90 m (TIR).</div>
+          </article>
+          <article class="card">
+            <div class="face front">Bands: VNIR / SWIR / TIR</div>
+            <div class="face back">Covers visible, near/short-wave infrared and thermal infrared.</div>
+          </article>
+          <article class="card">
+            <div class="face front">Coverage: targeted</div>
+            <div class="face back">Tasked over areas of interest; not daily global coverage.</div>
+          </article>
+          <article class="card">
+            <div class="face front">Orbit: polar</div>
+            <div class="face back">Near-polar orbit sweeping the Earth in successive swaths.</div>
+          </article>
+          <article class="card">
+            <div class="face front">Launch: Terra (1999)</div>
+            <div class="face back">Onboard NASA’s Terra satellite, operating since 1999.</div>
+          </article>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="functions.js"></script>
+</body>
+</html>

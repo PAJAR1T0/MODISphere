@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MODIS — Moderate Resolution Imaging Spectroradiometer</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <header class="hero">
+    <nav class="navbar">
+      <ul>
+        <li><a href="/Home/index.html">Home</a></li>
+        <li><a href="/Aster/aster.html">Aster</a></li>
+        <li><a href="/Ceres/ceres.html">Ceres</a></li>
+        <li><a href="/Misr/misr.html">MISR</a></li>
+        <li><a href="/Modis/modis.html">MODIS</a></li>
+        <li><a href="/Mopitt/mopitt.html">MOPITT</a></li>
+      </ul>
+    </nav>
+    <hr>
+    <h1>MODIS</h1>
+    <p class="subtitle">Earth’s eye across multiple spectral bands.</p>
+    <div class="image-container">
+      <!-- Héroe: ruta pedida -->
+      <img src="/public/imagenes/mp1.png" alt="Colorful satellite image of Earth">
+    </div>
+    <div class="button">
+      <a class="btn btn-primary cta-button" href="#" role="button">View Bands</a>
+    </div>
+  </header>
+
+  <section class="content">
+    <div class="left-column">
+      <h2>Spectral Viewer</h2>
+      <div class="main-view">
+        <!-- Muestra algo por defecto con tu ruta funcional -->
+        <img id="main-spectral" src="/public/imagenes/mp1.png" alt="Selected spectral view">
+      </div>
+
+      <div class="band-thumbnails">
+        <!-- Todos apuntan a mp1.png para que se vean; luego me pasas los nombres reales -->
+        <div class="band-thumb" >Visible (620–670 nm)</div>
+        <div class="band-thumb" >NIR (841–876 nm)</div>
+        <div class="band-thumb" >Blue (459–479 nm)</div>
+        <div class="band-thumb" >Thermal IR (3.66–3.84 µm)</div>
+        <div class="band-thumb" >Thermal IR (3.929–3.989 µm)</div>
+        <div class="band-thumb" >Thermal IR (10.780–11.280 µm)</div>
+        <div class="band-thumb" >Day (True Color)</div>
+        <div class="band-thumb" >Night (Thermal IR)</div>
+      </div>
+    </div>
+
+    <section class="tech-block">
+      <h2>Technical Sheet</h2>
+      <div class="specs-grid">
+        <div class="spec-card">36 bands</div>
+        <div class="spec-card">Resolution: 250–1000 m</div>
+        <div class="spec-card">Orbit: Terra & Aqua</div><br>
+        <div class="spec-card">Coverage: Daily global</div>
+      </div>
+    </section>
+
+    <div class="right-top">
+      <h2>What does MODIS measure?</h2>
+      <p>
+        MODIS measures <strong>radiance</strong> across <strong>36 bands</strong>, from visible to thermal infrared.
+        It enables global monitoring of vegetation, ocean color, surface temperature, clouds, aerosols and more.
+      </p>
+      <p>
+        Near-IR bands track vegetation water content, while thermal bands retrieve sea-surface temperature and detect fires.
+      </p>
+
+      <h2>MODIS Example</h2>
+      <div class="slider-container" id="modis-slider" style="--pos:50%;">
+        <!-- De momento una sola imagen con tu ruta funcional -->
+        <img src="/public/imagenes/mp1.png" alt="MODIS example view">
+      </div>
+    </div>
+
+    <div class="right-bottom">
+      <h2>Applications</h2>
+      <div class="applications-grid">
+        <div class="app-card"><i class="fas fa-leaf"></i> Vegetation cover</div>
+        <div class="app-card"><i class="fas fa-water"></i> Sea-surface temperature</div>
+        <div class="app-card"><i class="fas fa-fire"></i> Fire detection</div>
+        <div class="app-card"><i class="fas fa-smog"></i> Aerosols</div>
+        <div class="app-card"><i class="fas fa-cloud"></i> Clouds & fog</div>
+      </div>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>

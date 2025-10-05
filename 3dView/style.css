@@ -1,0 +1,72 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+canvas {
+    padding: 0;
+    margin: 0;
+}
+
+#logosDiv {
+    padding: 3dvh .1dvw;
+    position: absolute;
+    height: 2dvh;
+}
+
+#logosDiv img { 
+    height: 10dvh;
+    filter: drop-shadow( 0 0 16px rgba(255, 255, 255, .3));
+}
+
+#timeLineDiv {
+    position: absolute;
+    background-color: rgba(255, 255, 255, .25);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    top: 90dvh;
+    right: 40dvw;
+    padding: 1dvh .6dvw;
+    border-radius: 2dvw;
+    box-shadow: 0 0 48px rgba(255, 255, 255, .4);
+}
+
+#timeLineDiv p {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 1.5dvw;
+    margin: 0 1dvw;
+    color: rgba(255, 255, 255, .8);
+}
+
+#timeLineDiv button {
+    color: rgba(255, 255, 255, .8);
+    height: 3dvw;
+    width: 3dvw;
+    font-size: 2dvw;
+    background-color: rgba(255, 255, 255, .15);
+    border-style: none;
+    border-radius: 10dvw;
+    padding: 1dvw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#timeLineDiv button:hover {
+    scale: 1.1;
+    background-color: rgba(255, 255, 255, .18);
+    cursor: pointer;
+}
+
+#timeLineDiv button:active {
+    scale: 1.2;
+    background-color: rgba(255, 255, 255, .3);
+}
+
+#timeLineDiv button:disabled {
+    background-color: rgba(255, 255, 255, .15);
+    color: rgba(255, 255, 255, .3);
+}
